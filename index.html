@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Ingénieur Logiciel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        /* Variables pour un thème Dark/Dev très clean */
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-main: #e0e0e0;
+            --text-muted: #a0a0a0;
+            --accent-color: #4ade80; /* Vert menthe pro et moderne */
+            --border-color: #333333;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif; /* Typo sérieuse pour le corps */
+            margin: 0;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* La touche 8-bit geek appliquée uniquement aux éléments clés */
+        h1, h2, .pixel-text, .skill-badge {
+            font-family: 'Press Start 2P', monospace;
+            text-transform: uppercase;
+        }
+
+        h1 { 
+            font-size: 20px; 
+            color: #ffffff;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .subtitle {
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 40px;
+            font-size: 16px;
+        }
+
+        h2 { 
+            font-size: 14px; 
+            color: var(--accent-color);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-top: 50px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 25px;
+            margin-bottom: 20px;
+            /* Ombre portée style pixel art mais couleurs douces */
+            box-shadow: 6px 6px 0px rgba(74, 222, 128, 0.15);
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent-color);
+        }
+
+        .job-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0 0 5px 0;
+            color: #ffffff;
+        }
+
+        .date-location { 
+            color: var(--text-muted); 
+            font-size: 14px; 
+            margin-bottom: 15px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        ul { 
+            padding-left: 20px; 
+            margin: 0;
+        }
+
+        li { 
+            margin-bottom: 8px; 
+            color: #cccccc;
+        }
+
+        .skills { 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 12px; 
+            margin-top: 20px;
+        }
+
+        .skill-badge {
+            background-color: transparent;
+            color: var(--text-main);
+            padding: 8px 12px;
+            font-size: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 2px;
+        }
+
+        .skill-badge:hover {
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+            border-color: var(--accent-color);
+            cursor: default;
+        }
+
+        .blink { 
+            animation: blinker 1s linear infinite; 
+            color: var(--accent-color);
+        }
+        
+        @keyframes blinker { 
+            50% { opacity: 0; } 
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            h1 { font-size: 16px; }
+            h2 { font-size: 12px; }
+            .card { padding: 15px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <header>
+            <h1>
+                <svg width="24" height="16" viewBox="0 0 24 16" style="border: 1px solid var(--border-color); border-radius: 2px; margin-bottom: 2px;">
+                    <rect width="24" height="8" fill="#0038A8"/>
+                    <rect y="8" width="24" height="8" fill="#008A00"/>
+                    <circle cx="12" cy="8" r="3.5" fill="none" stroke="#D20000" stroke-width="1.2"/>
+                    <line x1="12" y1="4.5" x2="12" y2="11.5" stroke="#D20000" stroke-width="0.6"/>
+                    <line x1="8.5" y1="8" x2="15.5" y2="8" stroke="#D20000" stroke-width="0.6"/>
+                    <line x1="9.5" y1="5.5" x2="14.5" y2="10.5" stroke="#D20000" stroke-width="0.6"/>
+                    <line x1="14.5" y1="5.5" x2="9.5" y2="10.5" stroke="#D20000" stroke-width="0.6"/>
+                </svg>
+                > CHARLES BAUDY<span class="blink">_</span>
+            </h1>
+            <div class="subtitle">Ingénieur Logiciel Full Stack & DevOps</div>
+        </header>
+        
+        <section>
+            <h2>Expérience</h2>
+            <div class="card">
+                <h3 class="job-title">Développeur Full Stack & DevOps @ Atos</h3>
+                <div class="date-location">CDI (Oct 2023 - Présent) | Alternance (2022 - 2023) • Six-Fours</div>
+                <ul>
+                    <li>Développement Full Stack sur un environnement <strong>Java / Angular</strong>.</li>
+                    <li>Responsabilité DevOps de l'équipe et gestion des build nights sur GitLab CI pour une architecture de <strong>+70 microservices</strong>.</li>
+                    <li>Déploiement et configuration de SonarQube, interfacé avec la CI/CD pour l'analyse continue du code.</li>
+                    <li>Mise en place de tests E2E automatisés via Cypress post-build.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Projets Persos</h2>
+            <div class="card">
+                <h3 class="job-title">Sniper Bot Solana</h3>
+                <div class="date-location">TypeScript | Web3</div>
+                <ul>
+                    <li>Conception d'un bot de trading algorithmique haute fréquence sur la blockchain Solana.</li>
+                    <li>Optimisation de la vitesse d'exécution des transactions pour devancer le marché.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3 class="job-title">Agents IA Autonomes</h3>
+                <div class="date-location">LLMs Locaux | Python/TS</div>
+                <ul>
+                    <li>Déploiement d'agents d'Intelligence Artificielle fonctionnant intégralement en local (Zero-API).</li>
+                    <li>Focus sur la confidentialité des données et la réduction de la latence d'inférence.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Formation</h2>
+            <div class="card">
+                <h3 class="job-title">Diplôme d'Ingénieur du Numérique</h3>
+                <div class="date-location">ISEN Toulon • Diplômé en 2023</div>
+            </div>
+            <div class="card">
+                <h3 class="job-title">Semestre d'échange international</h3>
+                <div class="date-location">UQAR (Université du Québec à Rimouski)</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Stack Technique</h2>
+            <div class="skills">
+                <span class="skill-badge">Java</span>
+                <span class="skill-badge">Angular</span>
+                <span class="skill-badge">TypeScript</span>
+                <span class="skill-badge">GitLab CI</span>
+                <span class="skill-badge">Docker / DevOps</span>
+                <span class="skill-badge">SonarQube</span>
+                <span class="skill-badge">Cypress</span>
+                <span class="skill-badge">Web3 / Solana</span>
+                <span class="skill-badge">Local LLMs</span>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>
